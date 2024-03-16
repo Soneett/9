@@ -165,7 +165,7 @@ void shaker_sort(players* a, int size, int d)//ïåðåäà¸òñÿ íàïðàâ
   {
     for( j=ub; j>0; j-- )
     {
-      if (compare_structs(&a[j], &a[j-1])*d > 0)
+      if (compare_structs(&a[j-1], &a[j])*d > 0)
       {
         x=a[j-1]; 
 		a[j-1]=a[j]; 
