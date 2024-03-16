@@ -7,7 +7,7 @@
 #define N 2
 #define DEBUG
 
-int is_correct_str(char* s_field, char* n_field) //проверка введённого поля на корректность
+int is_correct_str(char* s_field, char* n_field) //ГЇГ°Г®ГўГҐГ°ГЄГ  ГўГўГҐГ¤ВёГ­Г­Г®ГЈГ® ГЇГ®Г«Гї Г­Г  ГЄГ®Г°Г°ГҐГЄГІГ­Г®Г±ГІГј
 {
 	for (int i = 0; i < strlen(s_field); i++)
 	{
@@ -21,7 +21,7 @@ int is_correct_str(char* s_field, char* n_field) //проверка введённого поля на к
 	return 0;
 }
 
-int choose_direction()//функция выбора направления сортировки
+int choose_direction()//ГґГіГ­ГЄГ¶ГЁГї ГўГ»ГЎГ®Г°Г  Г­Г ГЇГ°Г ГўГ«ГҐГ­ГЁГї Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ
 {
 	int d;
 	printf("Enter '1' to sort ascending\nEnter '-1' to sort descending\n");
@@ -34,7 +34,7 @@ int choose_direction()//функция выбора направления сортировки
 	return d;
 }
 
-int compare_structs(players* a, players* b) //функция последовательно сравнивает поля двух структур
+int compare_structs(players* a, players* b) //ГґГіГ­ГЄГ¶ГЁГї ГЇГ®Г±Г«ГҐГ¤Г®ГўГ ГІГҐГ«ГјГ­Г® Г±Г°Г ГўГ­ГЁГўГ ГҐГІ ГЇГ®Г«Гї Г¤ГўГіГµ Г±ГІГ°ГіГЄГІГіГ°
 {
 	int f = strcmp(a->fio, b->fio);
 	if (f!= 0) return f;
@@ -49,7 +49,7 @@ int compare_structs(players* a, players* b) //функция последовательно сравнивает
 	return a->goals - b->goals;
 }
 
-void print_arr(players* ptr, int n)//печать массива
+void print_arr(players* ptr, int n)//ГЇГҐГ·Г ГІГј Г¬Г Г±Г±ГЁГўГ 
 {
 	for (int i = 0; i < n; i++)
 		printf("%s %s %s %d %d %d\n", ptr[i].fio, ptr[i].club, ptr[i].role, ptr[i].age, ptr[i].matches, ptr[i].goals);
@@ -66,7 +66,7 @@ players* gen_array( int n)
 		
 		int p = rand() % N +1;
 		for (int u = 0; u < p; u++) 
-			fball_arr[i].fio[u] = rand() % 24 + 97;
+			fball_arr[i].fio[u] = rand() % 26 + 97;
 		fball_arr[i].fio[p] = '\0';
 		int t = rand() % N +1;
 		for (int u = 0; u < t; u++)
@@ -155,7 +155,7 @@ void insert_sort(players* a, int size, int d)
 		}
 }
 
-void shaker_sort(players* a, int size, int d)//передаётся направление сортировки ещё
+void shaker_sort(players* a, int size, int d)//ГЇГҐГ°ГҐГ¤Г ВёГІГ±Гї Г­Г ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ Г±Г®Г°ГІГЁГ°Г®ГўГЄГЁ ГҐГ№Вё
 {
   int j, k = size-1;
   int lb = 1, ub = size-1; 
@@ -308,7 +308,7 @@ int main()
 		printf("Error! Incorrect type of sort");
 		return;
 	}
-	//можно выбор направления сюда перенести
+	//Г¬Г®Г¦Г­Г® ГўГ»ГЎГ®Г° Г­Г ГЇГ°Г ГўГ«ГҐГ­ГЁГї Г±ГѕГ¤Г  ГЇГҐГ°ГҐГ­ГҐГ±ГІГЁ
 	checkSort(x, size, direction, sort_type);
 	print_arr(x, size);
 		
